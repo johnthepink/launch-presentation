@@ -1,0 +1,2 @@
+keytool -genkey -alias your-app-name -keyalg RSA -keysize 2048 -validity 10000
+METEOR_SESSION_FILE=deployment_token.json meteor login

@@ -1,0 +1,9 @@
+{
+  "ANDROID_KEY": "your-app-name",
+  "ANDROID_STORE_PASS": "password",
+  "ANDROID_ZIPALIGN": "path/to/zipalign",
+  "ANDROID_HOCKEY_TOKEN": "token",
+  "ANDROID_HOCKEY_ID": "id",
+  "GALAXY_DEPLOY_HOSTNAME": "galaxy.meteor.com",
+  "GALAXY_SESSION_FILE": "deployment_token.json"
+}
