@@ -47,7 +47,7 @@ export default class Presentation extends React.Component {
 
           <Slide transition={[]} bgColor="primary">
             <Heading size={1} margin="10px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
-              Continuous <br></br> Meteor App <br></br>Deploys
+              Continuous <br />Meteor App <br />Deploys
             </Heading>
             <Heading size={6} textFont="secondary" textColor="light-secondary">
               <S type="italic">From build, to deploy, to distribution</S>
@@ -55,10 +55,10 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-secondary">
-            <Heading fit lineHeight={1} textColor="primary">
+            <Heading lineHeight={1} textColor="primary">
               Automating...
             </Heading>
-            <List BulletList textFont="secondary">
+            <List textFont="secondary">
               <Appear><ListItem>Build iOS app</ListItem></Appear>
               <Appear><ListItem>Build Android app</ListItem></Appear>
               <Appear><ListItem>Deploy to Galaxy</ListItem></Appear>
@@ -91,7 +91,7 @@ export default class Presentation extends React.Component {
 
           <Slide transition={[]} bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="light-primary">
-              How did we <br></br>get here?!?
+              How did we <br />get here?!?
             </Heading>
             <Heading size={6} textFont="secondary" textColor="light-secondary">
               <S type="italic">and who is to blame?</S>
@@ -119,7 +119,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit lineHeight={1} textColor="primary">
+            <Heading lineHeight={1} textColor="primary">
               Results
             </Heading>
             <Heading size={6} textFont="secondary" lineHeight={1} textColor="dark-secondary">
@@ -151,8 +151,8 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={[]} bgImage={images.burns.replace("/", "")} bgDarken={0.75}>
-            <Heading fit caps lineHeight={1} textColor="light-primary">
+          <Slide transition={[]} bgImage={images.burns.replace("/", "")} bgDarken={0.25}>
+            <Heading size={5} caps lineHeight={1} textColor="light-primary">
               There is a better way
             </Heading>
           </Slide>
@@ -169,7 +169,7 @@ export default class Presentation extends React.Component {
               { loc: [3, 4], note: "distribute iOS through App Store / TestFlight" },
               { loc: [4, 5], note: "distribute Android through Google Play Store" },
             ]}
-            route={{ slide: 10 }}
+            route={{ slide: 11 }}
           />
 
           <Slide transition={[]} bgColor="primary" textColor="light-primary" notes={`
@@ -180,17 +180,10 @@ export default class Presentation extends React.Component {
             <Heading size={3} textFont="primary" textColor="light-secondary">
               Demo
             </Heading>
-            <List textFont="secondary">
-              <ListItem>Android on Hockey</ListItem>
-              <ListItem>iOS on Hockey</ListItem>
-              <ListItem>Android on Google Play</ListItem>
-              <ListItem>iOS on TestFlight</ListItem>
-              <ListItem>Start Live Demo of Basic Example</ListItem>
-            </List>
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit lineHeight={1} textColor="primary">
+            <Heading lineHeight={1} textColor="primary">
               So Why Launch?
             </Heading>
             <Heading size={6} textFont="secondary" textColor="dark-secondary">
@@ -214,7 +207,7 @@ export default class Presentation extends React.Component {
               { loc: [0, 1], note: "places launch.json in your directory" },
               { loc: [1, 2], note: "yes, i use vim" },
             ]}
-            route={{ slide: 13 }}
+            route={{ slide: 14 }}
           />
 
           <CodeSlide
@@ -244,7 +237,7 @@ export default class Presentation extends React.Component {
               { loc: [18, 19] },
               { loc: [19, 20] },
             ]}
-            route={{ slide: 14 }}
+            route={{ slide: 15 }}
           />
 
           <CodeSlide
@@ -256,7 +249,7 @@ export default class Presentation extends React.Component {
               { loc: [0, 1], note: "generate key and password" },
               { loc: [1, 2], note: "generate Galaxy auth file" },
             ]}
-            route={{ slide: 15 }}
+            route={{ slide: 16 }}
           />
 
           <CodeSlide
@@ -264,7 +257,7 @@ export default class Presentation extends React.Component {
             transition={[]}
             code={require("raw!../assets/android.example")}
             ranges={[
-              { loc: [0, 9], title: "Android to Galaxy to Hockey" },
+              { loc: [0, 9], title: "Android To Galaxy To Hockey" },
               { loc: [0, 1] },
               { loc: [1, 2], note: "name of the key we just generated" },
               { loc: [2, 3], note: "password for key just generated" },
@@ -275,7 +268,7 @@ export default class Presentation extends React.Component {
               { loc: [7, 8], note: "Galaxy auth file we just generated" },
               { loc: [8, 9] },
             ]}
-            route={{ slide: 16 }}
+            route={{ slide: 17 }}
           />
 
           <CodeSlide
@@ -283,16 +276,16 @@ export default class Presentation extends React.Component {
             transition={[]}
             code={require("raw!../assets/launch-android.example")}
             ranges={[
-              { loc: [0, 9], title: "Android to Galaxy to Hockey" },
+              { loc: [0, 9], title: "Android To Galaxy To Hockey" },
               { loc: [0, 1], note: "deploy to Galaxy" },
               { loc: [1, 2], note: "build app" },
               { loc: [2, 3], note: "upload and distribute through Hockey" },
             ]}
-            route={{ slide: 17 }}
+            route={{ slide: 18 }}
           />
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit lineHeight={1} textColor="primary">
+            <Heading lineHeight={1} textColor="primary">
               What Else?
             </Heading>
             <Heading size={6} textFont="secondary" textColor="dark-secondary">
@@ -310,7 +303,7 @@ export default class Presentation extends React.Component {
 
           <Slide transition={[]} bgColor="primary" textColor="light-primary">
             <Heading fit caps lineHeight={1} textColor="light-primary">
-              Continuous <br></br>Delivery
+              Continuous <br />Delivery
             </Heading>
             <Heading size={6} textFont="secondary" textColor="light-secondary">
               <S type="italic">Or, why we really built this</S>
@@ -318,7 +311,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit lineHeight={1} textColor="primary">
+            <Heading lineHeight={1} textColor="primary">
               Easy
             </Heading>
             <Heading size={6} textFont="secondary" textColor="dark-secondary">
@@ -345,17 +338,17 @@ export default class Presentation extends React.Component {
               { loc: [17, 18], note: "install launch" },
               { loc: [26, 29], note: "launch the things!" },
             ]}
-            route={{ slide: 21 }}
+            route={{ slide: 22 }}
           />
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit lineHeight={1} textColor="primary">
+            <Heading lineHeight={1} textColor="primary">
               Documentation
             </Heading>
             <Heading size={6} textFont="secondary" textColor="dark-secondary">
               <S type="italic">Learn you a launch for great good!</S>
             </Heading>
-            <List textFont="secondary">
+            <List className="list-small" textFont="secondary">
               <Appear><ListItem>Documentation for all launch actions at <Link href="http://newspring.github.io/meteor-launch">newspring.github.io/meteor-launch</Link></ListItem></Appear>
               <Appear><ListItem>Includes details about how to get the variables needed</ListItem></Appear>
               <Appear><ListItem>Examples exist for all actions</ListItem></Appear>
@@ -372,7 +365,7 @@ export default class Presentation extends React.Component {
             <Heading size={6} textFont="secondary" textColor="dark-secondary">
               <S type="italic">Very halp</S>
             </Heading>
-            <List textFont="secondary" lineHeight={1.4}>
+            <List className="list-small" textFont="secondary">
               <Appear><ListItem>Our original goal was to ship 1 alpha build a week</ListItem></Appear>
               <Appear><ListItem>We have been shipping multiple alphas a day</ListItem></Appear>
               <Appear><ListItem>Anyone on our team can ship a build to alpha and beta environments through PRs and GitHub releases</ListItem></Appear>
