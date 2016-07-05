@@ -7,6 +7,7 @@ import {
   Spectacle,
   Slide,
   Heading,
+  List,
   S,
 } from "spectacle";
 
@@ -24,6 +25,7 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 require("./fonts.css");
 require("./code.css");
+require("./styles.css");
 
 export const theme = createTheme({
   "primary": "#6bac43",
@@ -72,6 +74,12 @@ export const SubTitle = ({ children }) => (
   <Heading size={8}  textFont="secondary" textColor="light-secondary">
     <S type="italic">{children}</S>
   </Heading>
+);
+
+export const BulletList = ({ children }) => (
+  <ListItem lineHeight={10} padding="10px 0">
+    {children}
+  </ListItem>
 );
 
 export {

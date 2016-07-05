@@ -31,7 +31,7 @@ import preloader from "spectacle/lib/utils/preloader";
 
 const images = {
   why: require("../assets/why.gif"),
-  cloud: require("../assets/cloud.jpg"),
+  steps: require("../assets/steps-to-build.png"),
   fine: require("../assets/fine.gif"),
   burns: require("../assets/burns.gif"),
   fastlane: require("../assets/fastlane.png"),
@@ -47,34 +47,31 @@ export default class Presentation extends React.Component {
 
           <Slide transition={[]} bgColor="primary">
             <Heading size={1} margin="10px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
-              Continuous Meteor
+              Continuous <br></br> Meteor App <br></br>Deploys
             </Heading>
-            <Heading size={1} margin="10px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
-              App Deploys
-            </Heading>
-            <Heading size={8} textFont="secondary" textColor="light-secondary">
-              <S type="italic">from build to deploy to distribution</S>
+            <Heading size={6} textFont="secondary" textColor="light-secondary">
+              <S type="italic">From build, to deploy, to distribution</S>
             </Heading>
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-secondary">
-            <Heading fit caps lineHeight={1} textColor="primary">
+            <Heading fit lineHeight={1} textColor="primary">
               Automating...
             </Heading>
-            <List>
-              <Appear><ListItem>build iOS app</ListItem></Appear>
-              <Appear><ListItem>build Android app</ListItem></Appear>
-              <Appear><ListItem>deploy to Galaxy</ListItem></Appear>
-              <Appear><ListItem>deploy to Hockey</ListItem></Appear>
-              <Appear><ListItem>deploy to iTunes Store/TestFlight</ListItem></Appear>
-              <Appear><ListItem>deploy to Google Play Store</ListItem></Appear>
+            <List BulletList textFont="secondary">
+              <Appear><ListItem>Build iOS app</ListItem></Appear>
+              <Appear><ListItem>Build Android app</ListItem></Appear>
+              <Appear><ListItem>Deploy to Galaxy</ListItem></Appear>
+              <Appear><ListItem>Deploy to Hockey</ListItem></Appear>
+              <Appear><ListItem>Deploy to iTunes Store/TestFlight</ListItem></Appear>
+              <Appear><ListItem>Deploy to Google Play Store</ListItem></Appear>
             </List>
           </Slide>
 
           <Slide transition={[]} bgImage={images.why.replace("/", "")}></Slide>
 
           <Slide transition={[]} bgColor="light-primary">
-            <Heading size={10} textFont="secondary" textColor="dark-secondary">
+            <Heading size={10} textFont="primary" textColor="dark-secondary">
               <BlockQuote>
                 <Quote>Automate what is important.</Quote>
                 <Cite>Wise Person</Cite>
@@ -94,18 +91,18 @@ export default class Presentation extends React.Component {
 
           <Slide transition={[]} bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="light-primary">
-              How did we get here?!?
+              How did we <br></br>get here?!?
             </Heading>
-            <Heading size={8} textFont="secondary" textColor="light-secondary">
+            <Heading size={6} textFont="secondary" textColor="light-secondary">
               <S type="italic">and who is to blame?</S>
             </Heading>
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-secondary">
-            <Heading fit caps lineHeight={1} textColor="primary">
+            <Heading fit lineHeight={1} textColor="primary">
               New iOS/Android App
             </Heading>
-            <List>
+            <List textFont="secondary">
               <Appear><ListItem>Add more value than current app</ListItem></Appear>
               <Appear><ListItem>Lots of stakeholders</ListItem></Appear>
               <Appear><ListItem>Ship one alpha build a week</ListItem></Appear>
@@ -114,52 +111,43 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={[]} bgImage={images.cloud.replace("/", "")} bgDarken={0.75} notes={`
+          <Slide transition={[]} bgColor="dark-primary" bgImage={images.steps.replace("/", "")} notes={`
             meteor build, upload tarball to s3, create task def on ecs, wait, open xcode,
             archive app, upload to itunes, sign android app, align android app,
             upload to google play
           `}>
-            <Heading fit caps lineHeight={1} textColor="light-primary">
-              Insert image
-            </Heading>
-            <Heading fit caps lineHeight={1} textColor="light-primary">
-              showing steps to
-            </Heading>
-            <Heading fit caps lineHeight={1} textColor="light-primary">
-              ship a build
-            </Heading>
-          </Slide>
-
-          <Slide transition={[]} bgColor="primary" textColor="light-primary">
-            <Heading fit caps lineHeight={1} textColor="light-primary">
-              Results
-            </Heading>
-            <Heading fit caps lineHeight={1} textColor="light-primary">
-              Takes 30 minutes
-            </Heading>
-            <List>
-              <Appear><ListItem>not bad once a week</ListItem></Appear>
-              <Appear><ListItem>requires whole team to understand process</ListItem></Appear>
-              <Appear><ListItem>pretty tedious</ListItem></Appear>
-            </List>
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit caps lineHeight={1} textColor="primary">
-              Things go wrong
+            <Heading fit lineHeight={1} textColor="primary">
+              Results
             </Heading>
-            <Heading size={8} textFont="secondary" textColor="dark-secondary">
+            <Heading size={6} textFont="secondary" lineHeight={1} textColor="dark-secondary">
+              <S type="italic">Takes 30 minutes</S>
+            </Heading>
+
+            <List textFont="secondary">
+              <Appear><ListItem>Not bad once a week</ListItem></Appear>
+              <Appear><ListItem>Requires whole team to understand process</ListItem></Appear>
+              <Appear><ListItem>Pretty tedious</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={[]} bgImage={images.fine.replace("/", "")}></Slide>
+
+          <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
+            <Heading fit lineHeight={1} textColor="primary">
+              Things Go Wrong
+            </Heading>
+            <Heading size={6} textFont="secondary" textColor="dark-secondary">
               <S type="italic">30 minutes is generous</S>
             </Heading>
-            <div>
-              <Image src={images.fine.replace("/", "")} />
-            </div>
-            <List>
+            <List textFont="secondary">
               <Appear><ListItem>iOS cert and signing issues</ListItem></Appear>
-              <Appear><ListItem>user error</ListItem></Appear>
-              <Appear><ListItem>forget key passwords</ListItem></Appear>
-              <Appear><ListItem>forget how to Xcode</ListItem></Appear>
-              <Appear><ListItem>forget to update GraphQL server</ListItem></Appear>
+              <Appear><ListItem>User error</ListItem></Appear>
+              <Appear><ListItem>Forget key passwords</ListItem></Appear>
+              <Appear><ListItem>Forget how to Xcode</ListItem></Appear>
+              <Appear><ListItem>Forget to update GraphQL server</ListItem></Appear>
             </List>
           </Slide>
 
@@ -189,10 +177,10 @@ export default class Presentation extends React.Component {
             wouldn't do this for one build, but alpha/beta/production,
             actually demo the basic-example
           `}>
-            <Heading size={8} textFont="secondary" textColor="light-secondary">
-              <S type="italic">demo</S>
+            <Heading size={3} textFont="primary" textColor="light-secondary">
+              Demo
             </Heading>
-            <List>
+            <List textFont="secondary">
               <ListItem>Android on Hockey</ListItem>
               <ListItem>iOS on Hockey</ListItem>
               <ListItem>Android on Google Play</ListItem>
@@ -202,18 +190,18 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit caps lineHeight={1} textColor="primary">
+            <Heading fit lineHeight={1} textColor="primary">
               So Why Launch?
             </Heading>
-            <Heading size={8} textFont="secondary" textColor="dark-secondary">
-              <S type="italic">Automation tools for iOS and Android apps do exist.</S>
+            <Heading size={6} textFont="secondary" textColor="dark-secondary">
+              <S type="italic">Automation tools for iOS and Android do exist</S>
             </Heading>
-            <List>
-              <Appear><ListItem>new Xcode project each build</ListItem></Appear>
-              <Appear><ListItem>not easy to automate projects targeting iOS and Android from same code base</ListItem></Appear>
-              <Appear><ListItem>most do not play well with new xcode project</ListItem></Appear>
-              <Appear><ListItem>launch targets Meteor specifically</ListItem></Appear>
-              <Appear><ListItem>easy to manage from one file: launch.json</ListItem></Appear>
+            <List textFont="secondary">
+              <Appear><ListItem>New Xcode project each build</ListItem></Appear>
+              <Appear><ListItem>Not easy to automate projects targeting iOS and Android from same code base</ListItem></Appear>
+              <Appear><ListItem>Most do not play well with new Xcode project</ListItem></Appear>
+              <Appear><ListItem>Launch targets Meteor specifically</ListItem></Appear>
+              <Appear><ListItem>Easy to manage from one file: launch.json</ListItem></Appear>
             </List>
           </Slide>
 
@@ -304,45 +292,45 @@ export default class Presentation extends React.Component {
           />
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit caps lineHeight={1} textColor="primary">
-              What else?
+            <Heading fit lineHeight={1} textColor="primary">
+              What Else?
             </Heading>
-            <Heading size={8} textFont="secondary" textColor="dark-secondary">
-              <S type="italic">automate :allthethings:!</S>
+            <Heading size={6} textFont="secondary" textColor="dark-secondary">
+              <S type="italic">Automate :allthethings:!</S>
             </Heading>
-            <List>
-              <Appear><ListItem>launch init</ListItem></Appear>
-              <Appear><ListItem>launch build</ListItem></Appear>
-              <Appear><ListItem>launch galaxy</ListItem></Appear>
-              <Appear><ListItem>launch hockey</ListItem></Appear>
-              <Appear><ListItem>launch testflight</ListItem></Appear>
-              <Appear><ListItem>launch playstore</ListItem></Appear>
+            <List textFont="secondary">
+              <Appear><ListItem>Launch init</ListItem></Appear>
+              <Appear><ListItem>Launch build</ListItem></Appear>
+              <Appear><ListItem>Launch Galaxy</ListItem></Appear>
+              <Appear><ListItem>Launch Hockey</ListItem></Appear>
+              <Appear><ListItem>Launch Testflight</ListItem></Appear>
+              <Appear><ListItem>Launch Playstore</ListItem></Appear>
             </List>
           </Slide>
 
           <Slide transition={[]} bgColor="primary" textColor="light-primary">
             <Heading fit caps lineHeight={1} textColor="light-primary">
-              Continuous Delivery
+              Continuous <br></br>Delivery
             </Heading>
-            <Heading size={8} textFont="secondary" textColor="light-secondary">
-              <S type="italic">or, why we really built this</S>
+            <Heading size={6} textFont="secondary" textColor="light-secondary">
+              <S type="italic">Or, why we really built this</S>
             </Heading>
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit caps lineHeight={1} textColor="primary">
+            <Heading fit lineHeight={1} textColor="primary">
               Easy
             </Heading>
-            <Heading size={8} textFont="secondary" textColor="dark-secondary">
-              <S type="italic">peasy?</S>
+            <Heading size={6} textFont="secondary" textColor="dark-secondary">
+              <S type="italic">Peasy?</S>
             </Heading>
-            <List>
-              <Appear><ListItem>launch runs on both Linux and OSX</ListItem></Appear>
-              <Appear><ListItem>you still need OSX to build iOS</ListItem></Appear>
-              <Appear><ListItem>encrypt launch.json for Travis</ListItem></Appear>
-              <Appear><ListItem>place contents in env vars elsewhere</ListItem></Appear>
-              <Appear><ListItem>all launch variables can be overriden by env vars</ListItem></Appear>
-              <Appear><ListItem>^^ especially useful for android SDKs</ListItem></Appear>
+            <List fit textFont="secondary">
+              <Appear><ListItem>Launch runs on both Linux and OSX</ListItem></Appear>
+              <Appear><ListItem>You still need OSX to build iOS</ListItem></Appear>
+              <Appear><ListItem>Encrypt launch.json for Travis</ListItem></Appear>
+              <Appear><ListItem>Place contents in env vars elsewhere</ListItem></Appear>
+              <Appear><ListItem>All launch variables can be overriden by env vars</ListItem></Appear>
+              <Appear><ListItem>^^ especially useful for Android SDKs</ListItem></Appear>
             </List>
           </Slide>
 
@@ -361,43 +349,43 @@ export default class Presentation extends React.Component {
           />
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit caps lineHeight={1} textColor="primary">
+            <Heading fit lineHeight={1} textColor="primary">
               Documentation
             </Heading>
-            <Heading size={8} textFont="secondary" textColor="dark-secondary">
-              <S type="italic">learn you a launch for great good!</S>
+            <Heading size={6} textFont="secondary" textColor="dark-secondary">
+              <S type="italic">Learn you a launch for great good!</S>
             </Heading>
-            <List>
-              <Appear><ListItem>documentation for all launch actions at <Link href="http://newspring.github.io/meteor-launch">newspring.github.io/meteor-launch</Link></ListItem></Appear>
-              <Appear><ListItem>includes details about how to get the variables needed</ListItem></Appear>
-              <Appear><ListItem>examples exist for all actions</ListItem></Appear>
-              <Appear><ListItem>includes Travis builds</ListItem></Appear>
-              <Appear><ListItem>source code at <Link href="https://github.com/newspring/meteor-launch">newspring/meteor-launch</Link></ListItem></Appear>
-              <Appear><ListItem>all PRs welcome</ListItem></Appear>
+            <List textFont="secondary">
+              <Appear><ListItem>Documentation for all launch actions at <Link href="http://newspring.github.io/meteor-launch">newspring.github.io/meteor-launch</Link></ListItem></Appear>
+              <Appear><ListItem>Includes details about how to get the variables needed</ListItem></Appear>
+              <Appear><ListItem>Examples exist for all actions</ListItem></Appear>
+              <Appear><ListItem>Includes Travis builds</ListItem></Appear>
+              <Appear><ListItem>Source code at <Link href="https://github.com/newspring/meteor-launch">newspring/meteor-launch</Link></ListItem></Appear>
+              <Appear><ListItem>All PRs welcome</ListItem></Appear>
             </List>
           </Slide>
 
           <Slide transition={[]} bgColor="light-primary" textColor="dark-primary">
-            <Heading fit caps lineHeight={1} textColor="primary">
-              How launch helped us
+            <Heading fit lineHeight={1} textColor="primary">
+              How Launch Helped Us
             </Heading>
-            <Heading size={8} textFont="secondary" textColor="dark-secondary">
-              <S type="italic">very halp</S>
+            <Heading size={6} textFont="secondary" textColor="dark-secondary">
+              <S type="italic">Very halp</S>
             </Heading>
-            <List>
-              <Appear><ListItem>our original goal was to ship 1 alpha build a week</ListItem></Appear>
-              <Appear><ListItem>we have been shipping multiple alphas a day</ListItem></Appear>
-              <Appear><ListItem>anyone on our team can ship a build to alpha and beta environments through PRs and GitHub releases</ListItem></Appear>
-              <Appear><ListItem>our stakeholders are super happy</ListItem></Appear>
-              <Appear><ListItem>i am super happy because deploying is the worst</ListItem></Appear>
-              <Appear><ListItem>if we ship 2 builds a day, we are saving over 5 hours a week</ListItem></Appear>
-              <Appear><ListItem>it takes a fraction of that time to set up launch</ListItem></Appear>
+            <List textFont="secondary" lineHeight={1.4}>
+              <Appear><ListItem>Our original goal was to ship 1 alpha build a week</ListItem></Appear>
+              <Appear><ListItem>We have been shipping multiple alphas a day</ListItem></Appear>
+              <Appear><ListItem>Anyone on our team can ship a build to alpha and beta environments through PRs and GitHub releases</ListItem></Appear>
+              <Appear><ListItem>Our stakeholders are super happy</ListItem></Appear>
+              <Appear><ListItem>I am super happy because deploying is the worst</ListItem></Appear>
+              <Appear><ListItem>If we ship 2 builds a day, we are saving over 5 hours a week</ListItem></Appear>
+              <Appear><ListItem>It takes a fraction of the time to set up launch</ListItem></Appear>
             </List>
           </Slide>
 
           <Slide transition={[]} bgColor="primary" textColor="light-primary">
-            <Heading size={8} textFont="secondary" textColor="light-secondary">
-              <S type="italic">let us check on the build</S>
+            <Heading size={4} textFont="secondary" textColor="light-secondary">
+              <S type="italic">Let us check on the build</S>
             </Heading>
           </Slide>
 
@@ -405,8 +393,8 @@ export default class Presentation extends React.Component {
             <Heading fit caps lineHeight={1} textColor="light-primary">
               End
             </Heading>
-            <Heading size={8} textFont="secondary" textColor="light-secondary">
-              <S type="italic">thanks</S>
+            <Heading size={6} textFont="secondary" textColor="light-secondary">
+              <S type="italic">Thanks</S>
             </Heading>
           </Slide>
 
@@ -415,5 +403,3 @@ export default class Presentation extends React.Component {
     );
   }
 }
-
-
