@@ -7,7 +7,6 @@ import {
   Spectacle,
   Slide,
   Heading,
-  List,
   S,
 } from "spectacle";
 
@@ -74,12 +73,6 @@ export const SubTitle = ({ children }) => (
   <Heading size={8}  textFont="secondary" textColor="light-secondary">
     <S type="italic">{children}</S>
   </Heading>
-);
-
-export const BulletList = ({ children }) => (
-  <ListItem lineHeight={10} padding="10px 0">
-    {children}
-  </ListItem>
 );
 
 export {
