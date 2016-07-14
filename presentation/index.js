@@ -77,16 +77,12 @@ export default class Presentation extends React.Component {
                 <Cite>Wise Person</Cite>
               </BlockQuote>
             </Heading>
-            <Text
-              margin="30px 0 0 0"
-              textColor="dark-primary"
-              textFont="secondary"
-              textAlign="left"
-              textSize="28px"
-              lineHeight={1.4}
-            >
-              We have a team of XXX developers supporting XXX projects, and we have a lot to do! As developers, we should be spending our time adding value for our users, not sitting around waiting on long build and deploy processes. As a team, we try to automate everything that we can.
-            </Text>
+            <List textFont="secondary">
+              <Appear><ListItem>support lots of sites and services</ListItem></Appear>
+              <Appear><ListItem>lots of users</ListItem></Appear>
+              <Appear><ListItem>predictable and automated build and deploy</ListItem></Appear>
+              <Appear><ListItem>spend time adding value to users</ListItem></Appear>
+            </List>
           </Slide>
 
           <Slide transition={[]} bgColor="primary">
@@ -292,12 +288,12 @@ export default class Presentation extends React.Component {
               <S type="italic">Automate :allthethings:!</S>
             </Heading>
             <List textFont="secondary">
-              <Appear><ListItem>Launch init</ListItem></Appear>
-              <Appear><ListItem>Launch build</ListItem></Appear>
-              <Appear><ListItem>Launch Galaxy</ListItem></Appear>
-              <Appear><ListItem>Launch Hockey</ListItem></Appear>
-              <Appear><ListItem>Launch Testflight</ListItem></Appear>
-              <Appear><ListItem>Launch Playstore</ListItem></Appear>
+              <Appear><ListItem>launch init</ListItem></Appear>
+              <Appear><ListItem>launch build</ListItem></Appear>
+              <Appear><ListItem>launch galaxy</ListItem></Appear>
+              <Appear><ListItem>launch hockey</ListItem></Appear>
+              <Appear><ListItem>launch testflight</ListItem></Appear>
+              <Appear><ListItem>launch playstore</ListItem></Appear>
             </List>
           </Slide>
 
@@ -388,6 +384,15 @@ export default class Presentation extends React.Component {
             </Heading>
             <Heading size={6} textFont="secondary" textColor="light-secondary">
               <S type="italic">Thanks</S>
+            </Heading>
+            <Heading size={6} textFont="secondary" textColor="light-secondary">
+              <S type="italic"><Link href="https://github.com/newspring/meteor-launch">github.com/newspring/meteor-launch</Link></S>
+            </Heading>
+            <Heading size={6} textFont="secondary" textColor="light-secondary">
+              <S type="italic"><Link href="https://github.com/johnthepink">github.com/johnthepink</Link></S>
+            </Heading>
+            <Heading size={6} textFont="secondary" textColor="light-secondary">
+              <S type="italic"><Link href="https://launch-presentation.surge.sh">launch-presentation.surge.sh</Link></S>
             </Heading>
           </Slide>
 
